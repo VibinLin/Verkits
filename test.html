@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Verkits测试</title>
+    <script type="text/javascript" src="jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="Verkits.js"></script>
+</head>
+<body>
+    <div>
+        <label>测试文本：</label>  <input type="text" id="testText" /> 
+        <label>子串：</label>  <input type="text" id="substring" /><br/>
+        <input type="button" id="isNull"  value="是否为空" />
+        <input type="button" id="isBlank" value="是否为空白" />
+        <input type="button" id="isStartWith" value="是否以子串开头" />
+        <input type="button" id="isEndWith" value="是否以子串结尾" />
+        <input type="button" id="isInclude" value="是否包含子串" />
+        
+        <input type="button" id="isUrl" value="是否为URL" />
+        <input type="button" id="isMobilePhone" value="是否为手机号" />
+        <input type="button" id="isTelephone" value="是否为固定电话号码" />
+        <input type="button" id="isPhone" value="是否为空手机号或者固话号" />
+	    <input type="button" id="isQQ" value="是否为QQ" />
+        <input type="button" id="isIDCardNumber" value="是否为身份证" />
+        <input type="button" id="isEmail" value="是否为电子邮件地址" />
+        <input type="button" id="isPostCode" value="是否为中国邮政编码" />
+       
+       
+
+    </div>
+</body>
+</html>
+<script>
+    $("input[type=button]").css("margin","10px");
+    $("#isNull").live("click", function () {
+        alert($("#testText").val().isNull());
+    })
+    $("#isBlank").live("click", function () {
+        alert($("#testText").val().isBlank());
+    })
+    $("#isStartWith").live("click", function () {
+        alert($("#testText").val().isStartWith($("#substring").val()));
+    })
+    $("#isEndWith").live("click", function () {
+        alert($("#testText").val().isEndWith($("#substring").val()));
+    })
+    $("#isInclude").live("click", function () {
+        alert($("#testText").val().isInclude($("#substring").val()));
+    })
+
+
+    $("#isUrl").live("click", function () {
+        alert($("#testText").val().isUrl());
+    })
+    $("#isMobilePhone").live("click", function () {
+        alert($("#testText").val().isMobilePhone());
+    })
+    $("#isTelephone").live("click", function () {
+        alert($("#testText").val().isTelephone());
+    })
+    $("#isPhone").live("click", function () {
+        alert($("#testText").val().isPhone());
+    })
+    $("#isQQ").live("click", function () {
+        alert($("#testText").val().isQQ());
+    })
+    $("#isIDCardNumber").live("click", function () {
+        alert($("#testText").val().isIDCardNumber());
+    })
+    $("#isEmail").live("click", function () {
+        alert($("#testText").val().isEmail());
+    })
+    $("#isPostCode").live("click", function () {
+        alert($("#testText").val().isPostCode());
+    })
+</script>
